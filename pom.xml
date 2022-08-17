@@ -9,36 +9,6 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.codehaus.gmavenplus</groupId>
-                <artifactId>gmavenplus-plugin</artifactId>
-                <version>1.13.1</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>execute</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.apache.groovy</groupId>
-                        <artifactId>groovy</artifactId>
-                        <version>4.0.2</version>
-                        <scope>runtime</scope>
-                    </dependency>
-                </dependencies>
-                <configuration>
-                    <scripts>
-                        <script>src/main/groovy/Main.groovy</script>
-                    </scripts>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-
     <modules>
         <module>lobby</module>
         <module>manager</module>
