@@ -1,0 +1,3 @@
+rootProject.name = 'mtyt'
+include 'manager'
+include 'lobby'

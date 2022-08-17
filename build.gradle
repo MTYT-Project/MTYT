@@ -1,0 +1,38 @@
+plugins {
+    id 'groovy'
+}
+
+group 'me.itoncek'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.apache.groovy:groovy:4.0.4'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
+}
+
+task prepare (dependsOn: clean){
+    println 'Preparing...'
+    delete 'out/'
+}
+
+task copyFiles (dependsOn: build) {
+    copy {
+        from "lobby/build/libs"
+        into "out"
+        include "*.jar"
+    }
+    copy {
+        from "manager/build/libs"
+        into "out"
+        include "*.jar"
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
