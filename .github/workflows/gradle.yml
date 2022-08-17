@@ -32,7 +32,7 @@ jobs:
     - name: Build
       run: |
         chmod +x gradlew
-        gradlew clean prepare build copyFiles
+        ./gradlew clean prepare build copyFiles
     - name: Create release
       id: create_release
       run: |
