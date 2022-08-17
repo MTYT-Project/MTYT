@@ -1,0 +1,4 @@
+name: Manager
+version: '${project.version}'
+main: me.itoncek.mtyt.manager.Manager
+description: Event Manager for MTYT
