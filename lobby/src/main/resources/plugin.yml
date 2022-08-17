@@ -1,0 +1,9 @@
+name: Lobby
+version: '${project.version}'
+main: me.itoncek.mtyt.lobby.Lobby
+api-version: 1.19
+authors: [ IToncek ]
+description: Lobby manager for MTYT
+website: https://plugins.itoncek.cf/
+depend:
+  - SubServers-Client-Bukkit
